@@ -1,3 +1,4 @@
+export const GET_BUCKET = "GET_BUCKET";
 export const CREATE_BUCKET = "CREATE_BUCKET";
 export const DELETE_BUCKET = "DELETE_BUCKET";
 export const RENAME_BUCKET = "RENAME_BUCKET";

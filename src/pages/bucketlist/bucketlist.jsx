@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./bucketlist.css";
 import Bucket from "../../components/bucket/bucket";
 import { Link } from "react-router-dom";
+import Card from "../../components/card/card";
+import { useDispatch } from "react-redux";
+import { getBuckets } from "../../redux/action/bucketActions";
 function BucketList() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBuckets());
+  }, []);
   return (
     <div className="bucketlist">
       <div className="sidebar">
@@ -12,15 +20,9 @@ function BucketList() {
             <button> create new bucket</button>
           </Link>
         </div>
-        <div className="bucket-options">
-          <h3>Bucket 1</h3>
-          <Link to="/createcard">
-            <button className="sidebar-button">create card</button>
-          </Link>
-          <button className="sidebar-button">delete bucket</button>
-        </div>
+        <Bucket />
       </div>
-      <Bucket />
+      <Card />
     </div>
   );
 }

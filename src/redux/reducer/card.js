@@ -1,32 +1,14 @@
 import {
-  CREATE_BUCKET,
-  DELETE_BUCKET,
-  RENAME_BUCKET,
   CREATE_CARD,
   DELETE_CARD,
   EDIT_CARD,
   MOVE_CARD,
-  PLAY_CARD,
-} from "../actions";
+} from "../constant/constant";
 
-export const bucketReducer = (state = [], action) => {
-  switch (action.type) {
-    case CREATE_BUCKET:
-      return [...state, action.payload];
-    case DELETE_BUCKET:
-      return state.filter((bucket) => bucket.id !== action.payload);
-    case RENAME_BUCKET:
-      return state.map((bucket) =>
-        bucket.id === action.payload.bucketId
-          ? { ...bucket, name: action.payload.name }
-          : bucket
-      );
-    default:
-      return state;
-  }
+const INITIAL_CARDS_STATE = {
+  cards: [],
 };
-
-export const cardReducer = (state = {}, action) => {
+const cardsReducer = (state = INITIAL_CARDS_STATE, action) => {
   switch (action.type) {
     case CREATE_CARD:
       return {
@@ -67,11 +49,4 @@ export const cardReducer = (state = {}, action) => {
   }
 };
 
-export const historyReducer = (state = [], action) => {
-  switch (action.type) {
-    case PLAY_CARD:
-      return [...state, { ...action.payload, playedAt: new Date() }];
-    default:
-      return state;
-  }
-};
+export default cardsReducer;
