@@ -1,0 +1,19 @@
+.card {
+  display: grid;
+  justify-items: center;
+  margin: 15px;
+  padding: 20px;
+  background-color: aliceblue;
+  object-fit: contain;
+  border-radius: 12px;
+  border-radius: 12px;
+  /* background: #dae4e7; */
+  box-shadow: -30px 30px 51px #d1dbde, 30px -30px 51px #e3edf0;
+}
+.iframe {
+  max-width: 200px;
+  max-height: 200px;
+}
+.card-button {
+  gap: 10px;
+}

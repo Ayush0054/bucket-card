@@ -1,0 +1,8 @@
+.create {
+  display: grid;
+  justify-items: center;
+}
+.create-card-button {
+  padding: 5px;
+  margin: 5px;
+}

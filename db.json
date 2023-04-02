@@ -1,0 +1,34 @@
+{
+  "buckets": [
+    {
+      "id": 1,
+      "bucket-name": "music",
+      "cards": [
+        {
+          "id": 1,
+          "name": "Ayush",
+          "link": "url"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "Ayush",
+      "link": "url"
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "cards": [
+        {
+          "id": 1,
+          "name": "Ayush",
+          "link": "url"
+        }
+      ]
+    }
+  ]
+}
