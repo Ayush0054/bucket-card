@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="navbar">
-      <h1>LOGO</h1>
+      <h1>CRUD</h1>
       <div className="main-navbar">
         <Link to="/">
           <h2>BucketList</h2>

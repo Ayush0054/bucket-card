@@ -1,15 +1,16 @@
 {
   "buckets": [
     {
-      "id": 1,
-      "name": "music",
-      "cards": [
-        {
-          "id": 1,
-          "name": "Ayush",
-          "link": "url"
-        }
-      ]
+      "name": "dsgfgsgfd",
+      "id": 1
+    },
+    {
+      "name": "dasdasd",
+      "id": 2
+    },
+    {
+      "name": "jfyj",
+      "id": 3
     }
   ],
   "cards": [

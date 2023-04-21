@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import HistoryPage from "./pages/history/history-page";
 import CreateCard from "./pages/createCard/createcard";
 import CreateBucket from "./pages/createBucket/createBucket";
+import { getBuckets } from "./redux/action/bucketActions";
 
 function App() {
   return (

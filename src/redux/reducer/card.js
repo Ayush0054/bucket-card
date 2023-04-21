@@ -2,6 +2,7 @@ import {
   CREATE_CARD,
   DELETE_CARD,
   EDIT_CARD,
+  GET_CARD,
   MOVE_CARD,
 } from "../constant/constant";
 
@@ -10,6 +11,11 @@ const INITIAL_CARDS_STATE = {
 };
 const cardsReducer = (state = INITIAL_CARDS_STATE, action) => {
   switch (action.type) {
+    case GET_CARD:
+      return {
+        ...state,
+        cards: payload,
+      };
     case CREATE_CARD:
       return {
         ...state,
