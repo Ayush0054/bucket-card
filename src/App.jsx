@@ -7,13 +7,18 @@ import HistoryPage from "./pages/history/history-page";
 import CreateCard from "./pages/createCard/createcard";
 import CreateBucket from "./pages/createBucket/createBucket";
 import { getBuckets } from "./redux/action/bucketActions";
+import Login from "./pages/login/login";
 
 function App() {
   return (
     <div className="App">
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Navbar />
       <Routes>
         <Route path="/" element={<BucketList />} />
+
         <Route path="/history" element={<HistoryPage />} />
         <Route path="/createcard" element={<CreateCard />} />
         <Route path="/createbucket" element={<CreateBucket />} />

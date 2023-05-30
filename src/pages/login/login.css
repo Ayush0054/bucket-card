@@ -1,0 +1,54 @@
+.login-main {
+  display: grid;
+  justify-items: center;
+}
+.login-header-text {
+  font-size: 50px;
+}
+.image-login {
+  margin: 100px;
+  display: flex;
+  max-width: 70%;
+  gap: 20px;
+
+  border-radius: 10px;
+  background: #f8cb90;
+  box-shadow: 17px 17px 34px #b8b8b7, -17px -17px 34px #ffffff;
+}
+.login-image {
+  border-top-left-radius: 10px;
+  max-width: 800px;
+
+  border-bottom-left-radius: 10px;
+  /* box-shadow: inset 150px 150px 250px #000000, inset -150px -150px 250px #000000; */
+}
+.login {
+  padding: 40px;
+  display: grid;
+  justify-items: center;
+}
+.login > h1 {
+  font-size: xx-large;
+}
+.usernm-pass {
+  text-align: left;
+}
+input {
+  background-color: aliceblue;
+  padding: 5px;
+
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+}
+.login-btn {
+  margin: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgb(238, 141, 14);
+  font-weight: 900;
+}
