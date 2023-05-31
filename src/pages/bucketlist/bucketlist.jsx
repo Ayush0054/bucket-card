@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Card from "../../components/card/card";
 import { useDispatch } from "react-redux";
 import { getBuckets } from "../../redux/action/bucketActions";
+import Navbar from "../../components/navbar/navbar";
 function BucketList() {
   const dispatch = useDispatch();
 
@@ -12,17 +13,20 @@ function BucketList() {
     dispatch(getBuckets());
   }, []);
   return (
-    <div className="bucketlist">
-      <div className="sidebar">
-        <div className="header-sidebar">
-          <h1>all buckets</h1>
-          <Link to="/createbucket">
-            <button> create new bucket</button>
-          </Link>
+    <div>
+      <Navbar />
+      <div className="bucketlist">
+        <div className="sidebar">
+          <div className="header-sidebar">
+            <h1>all buckets</h1>
+            <Link to="/createbucket">
+              <button> create new bucket</button>
+            </Link>
+          </div>
+          <Bucket />
         </div>
-        <Bucket />
+        <Card />
       </div>
-      <Card />
     </div>
   );
 }

@@ -10,12 +10,14 @@ import { getBuckets } from "./redux/action/bucketActions";
 import Login from "./pages/login/login";
 
 function App() {
+  const [login, setLogin] = useState(false);
   return (
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login />} />
       </Routes>
-      <Navbar />
+      {/* {login && ( */}
+      {/* <div> */}
       <Routes>
         <Route path="/" element={<BucketList />} />
 
@@ -23,6 +25,8 @@ function App() {
         <Route path="/createcard" element={<CreateCard />} />
         <Route path="/createbucket" element={<CreateBucket />} />
       </Routes>
+      {/* </div> */}
+      {/* )} */}
     </div>
   );
 }

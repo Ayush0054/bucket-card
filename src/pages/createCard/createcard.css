@@ -12,3 +12,6 @@
   background-color: rgb(238, 141, 14);
   font-weight: 900;
 }
+.create-card-input {
+  max-width: 30%;
+}

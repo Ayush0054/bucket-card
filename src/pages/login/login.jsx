@@ -9,10 +9,10 @@ function Login() {
   const handleSubmit = async (e) => {};
   return (
     <div className="login-main">
-      <h1 className="login-header-text">Restaurant Dashboard</h1>
+      <h1 className="login-header-text">Bucket Card Dashboard</h1>
       <div className="image-login">
         <img
-          src="https://assets.cntraveller.in/photos/63d8e5103d7229d4cf308f01/16:9/w_1024%2Cc_limit/Prequel-lead.jpg"
+          src="https://img.officetimeline.com/website/Content/images/articles/PM-Task-Management/task-management-hero-banner.png"
           alt=""
           className="login-image"
         />
@@ -22,12 +22,14 @@ function Login() {
 
           <h2 className="usernm-pass">Username</h2>
           <input
+            className="usernm-input"
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
           />
           <h2 className="usernm-pass">Password</h2>
           <input
+            className="pswd-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

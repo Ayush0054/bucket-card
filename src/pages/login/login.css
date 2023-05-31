@@ -33,7 +33,15 @@
 .usernm-pass {
   text-align: left;
 }
-input {
+.usernm-input {
+  background-color: aliceblue;
+  padding: 5px;
+
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+}
+.pswd-input {
   background-color: aliceblue;
   padding: 5px;
 
