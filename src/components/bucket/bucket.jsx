@@ -9,14 +9,15 @@ function Bucket() {
   const { buckets } = useSelector((state) => state.bucketsData);
   const deletebucket = (id) => {
     dispatch(deleteBuckets(id));
-    console.log(id);
+    // console.log(id);
   };
+
   return (
     <div className="main">
       {buckets && (
         <div className="bucket">
           {buckets.map((bucket) => {
-            console.log(bucket);
+            //  console.log(bucket);
             return (
               <div className="bucket-options" key={bucket.id}>
                 <a onClick={""}>{bucket.name}</a>

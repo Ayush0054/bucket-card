@@ -6,11 +6,15 @@ import {
   MOVE_CARD,
 } from "../constant/constant";
 
+// ... Import action constants
+
 const INITIAL_CARDS_STATE = {
   cards: [],
 };
+
 const cardsReducer = (state = INITIAL_CARDS_STATE, action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case GET_CARD:
       return {
         ...state,
@@ -19,37 +23,26 @@ const cardsReducer = (state = INITIAL_CARDS_STATE, action) => {
     case CREATE_CARD:
       return {
         ...state,
-        [action.payload.bucketId]: [
-          ...state[action.payload.bucketId],
-          action.payload.card,
-        ],
+        cards: [...state.cards, payload],
       };
+
     case DELETE_CARD:
       return {
         ...state,
-        [action.payload.bucketId]: state[action.payload.bucketId].filter(
-          (card) => card.id !== action.payload.cardId
-        ),
+        cards: state.cards.filter((card) => card.id !== action.payload),
       };
     case EDIT_CARD:
       return {
         ...state,
-        [action.payload.bucketId]: state[action.payload.bucketId].map((card) =>
-          card.id === action.payload.cardId
-            ? { ...card, ...action.payload.card }
-            : card
-        ),
+        cards: {
+          ...state.cards,
+          [payload.bucketId]: state.cards[payload.bucketId].map((card) =>
+            card.id === payload.cardId ? { ...card, ...payload.card } : card
+          ),
+        },
       };
     case MOVE_CARD:
-      const { sourceBucketId, destinationBucketId, cardId } = action.payload;
-      const card = state[sourceBucketId].find((card) => card.id === cardId);
-      return {
-        ...state,
-        [sourceBucketId]: state[sourceBucketId].filter(
-          (card) => card.id !== cardId
-        ),
-        [destinationBucketId]: [...state[destinationBucketId], card],
-      };
+    // ... Move card logic
     default:
       return state;
   }

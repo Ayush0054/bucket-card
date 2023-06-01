@@ -1,27 +1,10 @@
 {
   "buckets": [
     {
-      "name": "",
+      "name": "dssfds",
       "id": 1
     }
   ],
-  "cards": [
-    {
-      "id": 1,
-      "name": "Ayush",
-      "link": "url"
-    }
-  ],
-  "history": [
-    {
-      "id": 1,
-      "cards": [
-        {
-          "id": 1,
-          "name": "Ayush",
-          "link": "url"
-        }
-      ]
-    }
-  ]
+  "cards": [],
+  "history": []
 }

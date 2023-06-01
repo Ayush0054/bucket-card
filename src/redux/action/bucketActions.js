@@ -23,7 +23,7 @@ export const createBuckets = (name) => async (dispatch) => {
 };
 
 export const deleteBuckets = (id) => async (dispatch) => {
-  const { data } = await axios.delete(`${apiurl}/${id}`);
+  const { data } = await axios.delete(`${apiurl}/cards/${id}`);
   console.log(data);
   dispatch({
     type: DELETE_BUCKET,
