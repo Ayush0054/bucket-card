@@ -11,7 +11,7 @@ function Card() {
     // console.log(id);
   };
   return (
-    <div>
+    <div className="main-card">
       {cards && (
         <div className="new-card">
           {cards.map((crd) => {

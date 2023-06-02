@@ -17,3 +17,8 @@
 .card-button {
   gap: 10px;
 }
+.new-card {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+}
