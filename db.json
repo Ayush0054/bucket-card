@@ -3,8 +3,23 @@
     {
       "name": "dssfds",
       "id": 1
+    },
+    {
+      "name": "fdsgfdgd",
+      "id": 2
     }
   ],
-  "cards": [],
+  "cards": [
+    {
+      "card": "asdasd",
+      "name": "dsadsa",
+      "id": 1
+    },
+    {
+      "card": "asdasd",
+      "name": "dasda",
+      "id": 2
+    }
+  ],
   "history": []
 }

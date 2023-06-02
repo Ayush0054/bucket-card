@@ -11,7 +11,7 @@ function Bucket() {
     dispatch(deleteBuckets(id));
     // console.log(id);
   };
-
+  const bucketName = "";
   return (
     <div className="main">
       {buckets && (
@@ -21,7 +21,11 @@ function Bucket() {
             return (
               <div className="bucket-options" key={bucket.id}>
                 <a onClick={""}>{bucket.name}</a>
-                <Link to="/createcard">
+                <Link
+                  to={`/createcard?bucketName=${encodeURIComponent(
+                    bucket.name
+                  )}`}
+                >
                   <button className="sidebar-button">create card</button>
                 </Link>
                 <button

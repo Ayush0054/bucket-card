@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./createcard.css";
 import { createCards } from "../../redux/action/cardActions";
@@ -8,15 +8,16 @@ function CreateCard() {
   const [card, setCard] = useState("");
   const [name, setName] = useState("");
   const dispatch = useDispatch();
-  const { buckets } = useSelector((state) => state.bucketsData);
-  // const { bucketId, bucketName } = buckets;
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const bucketName = queryParams.get("bucketName");
   const navigate = useNavigate();
   const createcard = (e) => {
     // e.preventDefault()
-    dispatch(createCards(buckets, card, name));
+    dispatch(createCards(bucketName, card, name));
     setCard("");
     navigate("/");
-    console.log(card, buckets, name);
+    console.log(card, bucketName, name);
   };
   return (
     <form action="/" onSubmit={createcard}>
