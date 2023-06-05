@@ -20,7 +20,7 @@ function BucketList() {
           <div className="header-sidebar">
             <h1>all buckets</h1>
             <Link to="/createbucket">
-              <button> create new bucket</button>
+              <button className="create-bucket-btn"> create new bucket</button>
             </Link>
           </div>
           <Bucket />

@@ -8,12 +8,25 @@
   margin: 10px;
   height: 100%;
   border-radius: 22px;
-  background: #dae4e7;
-  box-shadow: 20px 20px 60px #b9c2c4, -20px -20px 60px #fbffff;
+  background: #ecbf84;
+  /* background-color: rgb(238, 141, 14); */
+  /* box-shadow: 20px 20px 60px #b9c2c4, -20px -20px 60px #fbffff; */
   text-align: center;
 }
 .header-sidebar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.create-bucket-btn {
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgb(238, 141, 14);
+  font-weight: 900;
 }
